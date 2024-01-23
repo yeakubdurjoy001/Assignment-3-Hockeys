@@ -4,14 +4,14 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Hockey's Page</title>
-    <!-- Google fonts -->
+    <!------------ Google fonts ---------------->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap"
       rel="stylesheet"
     />
-    <!-- Tailwind and DaisyUI setup -->
+    <!--------- Tailwind and DaisyUI setup -------->
     <link
       href="https://cdn.jsdelivr.net/npm/daisyui@4.6.0/dist/full.min.css"
       rel="stylesheet"
@@ -24,9 +24,9 @@
       }
     </style>
   </head>
-  <body class="mx-14 box-border manrope-font">
-    <header>
-      <!-- Navbar Section -->
+  <body class="manrope-font">
+    <header class="container mx-auto">
+      <!------------- Navbar Section ------------>
       <div class="navbar bg-base-100">
         <div class="navbar-start">
           <div class="dropdown">
@@ -75,7 +75,7 @@
           <a class="btn bg-red-500 text-white">Get Ticket</a>
         </div>
       </div>
-      <!-- Slider section -->
+      <!------------ Slider section -------------->
       <section class="my-20">
         <div class="carousel w-full">
           <div id="slide1" class="carousel-item relative w-full">
@@ -126,8 +126,8 @@
         </div>
       </section>
     </header>
-    <main>
-      <!-- Radial progress section -->
+    <main class="container mx-auto">
+      <!----------- Radial progress section -------->
       <section class="text-center">
         <h3 class="text-3xl font-extrabold text-[#131318]">
           Professional Hockeys Club
@@ -199,7 +199,7 @@
           </div>
         </div>
       </section>
-      <!-- Program Section -->
+      <!------------ Program Section ----------->
       <section>
         <div class="text-center space-y-4 mb-5">
           <h4 class="text-4xl font-extrabold">Program Sections</h4>
@@ -210,14 +210,15 @@
           </p>
         </div>
         <!-- Text Overlay part -->
-        <div class="grid">
-          <div class="flex-row lg:flex gap-3 mb-3 rounded-xl">
+        <div class="">
+          <div
+            class="flex flex-col md:flex-row flex-wrap gap-3 mb-3 rounded-xl"
+          >
             <!-- first photo -->
-            <div class="relative">
-              <img class="" src="Images/2.png" alt="Image" />
-              <div
-                class="absolute inset-0 flex flex-col items-baseline justify-center pl-10"
-              >
+            <div
+              class="basis-[49.5%] bg-[url('./Images/2.png')] bg-no-repeat bg-cover bg-center rounded-xl"
+            >
+              <div class="mx-10 mt-20 mb-10">
                 <h1 class="text-white text-3xl font-bold pb-2">
                   Junior Program
                 </h1>
@@ -236,15 +237,10 @@
               </div>
             </div>
             <!-- second Photo -->
-            <div class="relative">
-              <img
-                src="Images/3.png"
-                alt="Image"
-                class="h-auto bg-[#13131880] rounded-xl"
-              />
-              <div
-                class="absolute inset-0 flex flex-col items-baseline justify-center pl-10"
-              >
+            <div
+              class="basis-[49.3%] bg-[url('./Images/3.png')] bg-no-repeat bg-cover bg-center rounded-xl"
+            >
+              <div class="mx-10 mt-20 mb-10">
                 <h1 class="text-white text-3xl font-bold pb-2">
                   Teenager Program
                 </h1>
@@ -262,37 +258,32 @@
                 </button>
               </div>
             </div>
-          </div>
-          <!-- third photo -->
-          <div class="relative">
-            <img
-              src="Images/4.png"
-              alt="Image"
-              class="h-auto rounded-xl mb-14 bg-[#13131880]"
-            />
             <div
-              class="absolute inset-0 flex flex-col items-baseline justify-center pl-10"
+              class="basis-[100%] bg-[url('./Images/4.png')] bg-no-repeat bg-cover bg-center rounded-xl"
             >
-              <h1 class="text-white text-3xl pb-6 font-bold">
-                Professional Program
-              </h1>
-              <p class="text-white font-medium pb-4">
-                Dolor sit amet consectetur. Ut urna diam quis sagittis. Elit
-                elit <br />
-                enim sagittis turpis in magna. Id et sed euismod natoque amet
-                <br />
-                nunc morbi nulla. Tortor congue sed et in.
-              </p>
-              <button
-                class="bg-[#FF4240] hover:bg-black text-white font-bold py-2 px-4 rounded"
-              >
-                Register Now!
-              </button>
+              <div class="mx-10 mt-20 mb-10">
+                <h1 class="text-white text-3xl pb-6 font-bold">
+                  Professional Program
+                </h1>
+                <p class="text-white font-medium pb-4">
+                  Dolor sit amet consectetur. Ut urna diam quis sagittis. Elit
+                  elit <br />
+                  enim sagittis turpis in magna. Id et sed euismod natoque amet
+                  <br />
+                  nunc morbi nulla. Tortor congue sed et in.
+                </p>
+                <button
+                  class="bg-[#FF4240] hover:bg-black text-white font-bold py-2 px-4 rounded"
+                >
+                  Register Now!
+                </button>
+              </div>
             </div>
           </div>
+          <!-- third photo -->
         </div>
       </section>
-      <!--Product section  -->
+      <!--------------Product section  ------------->
       <section>
         <div class="text-center space-y-5">
           <h4 class="text-4xl font-extrabold">Our New Products</h4>
@@ -303,20 +294,24 @@
           </p>
         </div>
 
-        <div class="sm:flex-row gap-4 lg:flex mb-5">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
           <!-- Product 1 -->
-          <div class="flex border-2 p-6">
-            <div class="sm:flex-row lg:flex shadow-xl rounded-xl">
-              <div>
-                <img class="p-4" src="Images/5.png" alt="Movie" />
-              </div>
+          <div class="flex flex-col md:flex-row border-2 p-5 gap-5">
+            <div class="w-full md:w-auto md:flex items-center">
+              <img
+                class="h-[370px] md:w-[180px] md:h-[180px] object-cover w-full rounded-lg"
+                src="Images/5.png"
+                alt="Movie"
+              />
+            </div>
 
-              <div class="card-body">
-                <p class="flex gap-2">
+            <div class="flex items-center">
+              <div class="flex flex-col gap-3">
+                <div class="flex gap-2">
                   <img src="Images/Vector.png" alt="" />5.0
                   <img src="Images/Frame (4).png" alt="" /> 20
                   <img src="Images/Frame (5).png" alt="" />200
-                </p>
+                </div>
                 <h2 class="card-title">World Cup Flags Football</h2>
                 <p>
                   Dolor sit amet consectetur. Ut urna diam <br />
@@ -332,18 +327,22 @@
             </div>
           </div>
           <!-- Product 2 -->
-          <div class="flex border-2 p-6">
-            <div class="sm:flex-row lg:flex shadow-xl rounded-xl">
-              <div>
-                <img class="p-4" src="Images/6.png" alt="Movie" />
-              </div>
+          <div class="flex flex-col md:flex-row border-2 p-5 gap-5">
+            <div class="w-full md:w-auto md:flex items-center">
+              <img
+                class="h-[370px] md:w-[180px] md:h-[180px] object-cover w-full rounded-lg"
+                src="Images/6.png"
+                alt="Movie"
+              />
+            </div>
 
-              <div class="card-body">
-                <p class="flex gap-2">
+            <div class="flex items-center">
+              <div class="flex flex-col gap-3">
+                <div class="flex gap-2">
                   <img src="Images/Vector.png" alt="" />5.0
                   <img src="Images/Frame (4).png" alt="" /> 20
                   <img src="Images/Frame (5).png" alt="" />200
-                </p>
+                </div>
                 <h2 class="card-title">World Cup Flags Football</h2>
                 <p>
                   Dolor sit amet consectetur. Ut urna diam <br />
@@ -358,21 +357,23 @@
               </div>
             </div>
           </div>
-        </div>
-        <div class="sm:flex-row gap-4 lg:flex mb-5">
           <!-- Product 3 -->
-          <div class="flex border-2 p-6">
-            <div class="sm:flex-row lg:flex shadow-xl rounded-xl">
-              <div>
-                <img class="p-4" src="Images/7.png" alt="Movie" />
-              </div>
+          <div class="flex flex-col md:flex-row border-2 p-5 gap-5">
+            <div class="w-full md:w-auto md:flex items-center">
+              <img
+                class="h-[370px] md:w-[180px] md:h-[180px] object-cover w-full rounded-lg"
+                src="Images/7.png"
+                alt="Movie"
+              />
+            </div>
 
-              <div class="card-body">
-                <p class="flex gap-2">
+            <div class="flex items-center">
+              <div class="flex flex-col gap-3">
+                <div class="flex gap-2">
                   <img src="Images/Vector.png" alt="" />5.0
                   <img src="Images/Frame (4).png" alt="" /> 20
                   <img src="Images/Frame (5).png" alt="" />200
-                </p>
+                </div>
                 <h2 class="card-title">World Cup Flags Football</h2>
                 <p>
                   Dolor sit amet consectetur. Ut urna diam <br />
@@ -387,19 +388,23 @@
               </div>
             </div>
           </div>
-          <!-- Product 4 -->
-          <div class="flex border-2 p-6">
-            <div class="sm:flex-row lg:flex shadow-xl rounded-xl">
-              <div>
-                <img class="p-4" src="Images/8.png" alt="Movie" />
-              </div>
+          <!-- Product  -->
+          <div class="flex flex-col md:flex-row border-2 p-5 gap-5">
+            <div class="w-full md:w-auto md:flex items-center">
+              <img
+                class="h-[370px] md:w-[180px] md:h-[180px] object-cover w-full rounded-lg"
+                src="Images/8.png"
+                alt="Movie"
+              />
+            </div>
 
-              <div class="card-body">
-                <p class="flex gap-2">
+            <div class="flex items-center">
+              <div class="flex flex-col gap-3">
+                <div class="flex gap-2">
                   <img src="Images/Vector.png" alt="" />5.0
                   <img src="Images/Frame (4).png" alt="" /> 20
                   <img src="Images/Frame (5).png" alt="" />200
-                </p>
+                </div>
                 <h2 class="card-title">World Cup Flags Football</h2>
                 <p>
                   Dolor sit amet consectetur. Ut urna diam <br />
@@ -414,21 +419,23 @@
               </div>
             </div>
           </div>
-        </div>
-        <div class="sm:flex-row gap-4 mb-5 lg:flex">
           <!-- Product 5 -->
-          <div class="flex border-2 p-6">
-            <div class="sm:flex-row lg:flex shadow-xl rounded-xl">
-              <div>
-                <img class="p-4" src="Images/9.png" alt="Movie" />
-              </div>
+          <div class="flex flex-col md:flex-row border-2 p-5 gap-5">
+            <div class="w-full md:w-auto md:flex items-center">
+              <img
+                class="h-[370px] md:w-[180px] md:h-[180px] object-cover w-full rounded-lg"
+                src="Images/9.png"
+                alt="Movie"
+              />
+            </div>
 
-              <div class="card-body">
-                <p class="flex gap-2">
+            <div class="flex items-center">
+              <div class="flex flex-col gap-3">
+                <div class="flex gap-2">
                   <img src="Images/Vector.png" alt="" />5.0
                   <img src="Images/Frame (4).png" alt="" /> 20
                   <img src="Images/Frame (5).png" alt="" />200
-                </p>
+                </div>
                 <h2 class="card-title">World Cup Flags Football</h2>
                 <p>
                   Dolor sit amet consectetur. Ut urna diam <br />
@@ -444,18 +451,22 @@
             </div>
           </div>
           <!-- Product 6 -->
-          <div class="flex border-2 p-6">
-            <div class="sm:flex-row lg:flex shadow-xl rounded-xl">
-              <div>
-                <img class="p-4" src="Images/10.png" alt="Movie" />
-              </div>
+          <div class="flex flex-col md:flex-row border-2 p-5 gap-5">
+            <div class="w-full md:w-auto md:flex items-center">
+              <img
+                class="h-[370px] md:w-[180px] md:h-[180px] object-cover w-full rounded-lg"
+                src="Images/10.png"
+                alt="Movie"
+              />
+            </div>
 
-              <div class="card-body">
-                <p class="flex gap-2">
+            <div class="flex items-center">
+              <div class="flex flex-col gap-3">
+                <div class="flex gap-2">
                   <img src="Images/Vector.png" alt="" />5.0
                   <img src="Images/Frame (4).png" alt="" /> 20
                   <img src="Images/Frame (5).png" alt="" />200
-                </p>
+                </div>
                 <h2 class="card-title">World Cup Flags Football</h2>
                 <p>
                   Dolor sit amet consectetur. Ut urna diam <br />
@@ -472,7 +483,99 @@
           </div>
         </div>
       </section>
+      <!------------- Clients Questions section -->
+      <section>
+        <div class="text-center space-y-4 my-16">
+          <h4 class="text-4xl font-extrabold">Clients Question</h4>
+          <p>
+            Dit amet consectetur. Condimentum dignissim adipiscing aliquam
+            turpis placerat dolor. Purus urna in sit nullam proin.
+          </p>
+        </div>
+
+        <div class="flex flex-1 justify-between">
+          <div class="">
+            <img src="Images/11.png" alt="" />
+          </div>
+          <!-- Faq -->
+          <div>
+            <div class="collapse collapse-plus bg-base-200">
+              <input type="radio" name="my-accordion-3" checked="checked" />
+              <div class="collapse-title text-xl font-medium">
+                Our Equipment
+              </div>
+              <div class="collapse-content">
+                <p>hello</p>
+              </div>
+            </div>
+            <div class="collapse collapse-plus bg-base-200">
+              <input type="radio" name="my-accordion-3" />
+              <div class="collapse-title text-xl font-medium">
+                Hockey Training
+              </div>
+              <div class="collapse-content">
+                <p>hello</p>
+              </div>
+            </div>
+            <div class="collapse collapse-plus bg-base-200">
+              <input type="radio" name="my-accordion-3" />
+              <div class="collapse-title text-xl font-medium">
+                Private Lessons
+              </div>
+              <div class="collapse-content">
+                <p>hello</p>
+              </div>
+            </div>
+            <div class="collapse collapse-plus bg-base-200">
+              <input type="radio" name="my-accordion-3" />
+              <div class="collapse-title text-xl font-medium">Ski Touring</div>
+              <div class="collapse-content">
+                <p>hello</p>
+              </div>
+            </div>
+            <div class="collapse collapse-plus bg-base-200">
+              <input type="radio" name="my-accordion-3" />
+              <div class="collapse-title text-xl font-medium">Booking</div>
+              <div class="collapse-content">
+                <p>hello</p>
+              </div>
+            </div>
+            <div class="collapse collapse-plus bg-base-200">
+              <input type="radio" name="my-accordion-3" />
+              <div class="collapse-title text-xl font-medium">Pricings</div>
+              <div class="collapse-content">
+                <p>hello</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
-    <footer></footer>
+    <footer class="footer p-10 bg-black mt-10 mx-0 text-white">
+      <aside>
+        <h4 class="text-3xl font-extrabold">Get In Touch</h4>
+        <p>ACME Industries Ltd.<br />Providing reliable tech since 1992</p>
+      </aside>
+      <nav>
+        <header class="footer-title">Company</header>
+        <a class="link link-hover">Branding</a>
+        <a class="link link-hover">Design</a>
+        <a class="link link-hover">Marketing</a>
+        <a class="link link-hover">Advertisement</a>
+      </nav>
+      <nav>
+        <header class="footer-title">Support</header>
+        <a class="link link-hover">About us</a>
+        <a class="link link-hover">Contact</a>
+        <a class="link link-hover">Jobs</a>
+        <a class="link link-hover">Press kit</a>
+      </nav>
+      <nav>
+        <header class="footer-title">Services</header>
+        <a class="link link-hover">Terms of use</a>
+        <a class="link link-hover">Privacy policy</a>
+        <a class="link link-hover">Cookie policy</a>
+      </nav>
+    </footer>
   </body>
 </html>
